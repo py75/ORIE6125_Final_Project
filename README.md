@@ -1,11 +1,11 @@
 # ORIE6125_Final_Project
 Assumptions about the Bulls and Cow Games
 
-	1. the secret code is a 4 digit number with unique digits from 1-9
+	1. the secret code is a length 10 combination of digits and English alphabet
 	2. every round, each person takes turns guessing the other's secret
-	3. Simplified guessing scheme:
-			Starting from 1234, guess and if wrong, increment guess by 1
-			Minimal optimization - explained below
+
+The algorithms we are going to implement is based on "Optimal Algorithms for 
+mastermind and bulls-cows games"
 
 MyUDPHandler class, the server, and the client functionality based off
 the code found from
