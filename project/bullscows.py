@@ -1,7 +1,11 @@
 from random import randint
 
 class BullsCows:
+	'''The platform of the game of Bulls and Cows.
+	'''
 	def __init__(self, _npos, _ndigit, _rep):
+		'''Generate random secret given the number of positions, number of possible digits and if can repeat
+		'''
 		self.npos = _npos
 		self.ndigit = _ndigit
 		self.rep = _rep
@@ -20,17 +24,21 @@ class BullsCows:
 		self.secret = ''.join(str(c) for c in sec_tmp)
 
 	def play(self, solver):
+		'''Let the game begin.
+		'''
 		solver.reset();
 		nsteps = 0
 		while True:
 			q = solver.query()
 			nsteps = nsteps + 1
-			(a, b) = self.check(q)
+			(a, b) = self.answer(q)
 			if a == self.npos:
 				return nsteps
-			solver.answer(a, b)
+			solver.update(a, b)
 
-	def check(self, query):
+	def answer(self, query):
+		'''Compute the answer to the query.
+		'''
 		a = 0
 		b = 0
 		for i in range(self.npos):

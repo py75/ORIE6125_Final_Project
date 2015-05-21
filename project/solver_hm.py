@@ -1,7 +1,9 @@
 from bcsolver import Solver
 
 class Solver_HM:
-	def __init__(self):
+	'''Human solver, for testing.
+	'''
+	def __init__(self, _npos, _ndigit, _rep):
 		self.reset()
 	def reset(self):
 		pass
@@ -9,5 +11,5 @@ class Solver_HM:
 		q = raw_input("Query: ")
 		qq = q.strip()
 		return qq
-	def answer(self, a, b):
+	def update(self, a, b):
 		print 'Answer:', a, b
