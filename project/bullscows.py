@@ -30,8 +30,10 @@ class BullsCows:
 		nsteps = 0
 		while True:
 			q = solver.query()
+			#print q
 			nsteps = nsteps + 1
 			(a, b) = self.answer(q)
+			#print (a,b)
 			if a == self.npos:
 				return nsteps
 			solver.update(a, b)
@@ -43,11 +45,11 @@ class BullsCows:
 		b = 0
 		for i in range(self.npos):
 			if query[i] == self.secret[i]:
-				a = a + 1
+				a += 1
 			else:
 				for j in range(self.npos):
 					if query[i] == self.secret[j]:
-						b = b + 1
+						b += 1
 						break
 		return (a, b)
 
