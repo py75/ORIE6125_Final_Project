@@ -3,9 +3,12 @@ from random import randint
 class BullsCows:
 	'''The platform of the game of Bulls and Cows.
 	'''
-	def __init__(self, _npos, _ndigit, _rep):
+	def __init__(self, _npos, _ndigit, _rep, _secret = None):
 		'''Generate random secret given the number of positions, number of possible digits and if can repeat
 		'''
+		if _secret != None:
+			self.secret = _secret
+			return
 		self.npos = _npos
 		self.ndigit = _ndigit
 		self.rep = _rep
