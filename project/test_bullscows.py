@@ -31,5 +31,11 @@ class TestBullsCows(unittest.TestCase):
 		self.assertEqual(temp,True)
 
 	def test_ans(self):
-		bc = BullsCows(4, 10, False, '2417')
-		self.assertEqual(bc.answer('1407'), (2,1))
+		bc1 = BullsCows(4, 10, False, '2417')
+		self.assertEqual(bc1.answer('1407'), (2, 1))
+		
+		bc2 = BullsCows(5, 6, True, '1102')
+		self.assertEqual(bc2.answer('1027'), (1, 2))
+
+if __name__ == '__main__':
+	unittest.main()
